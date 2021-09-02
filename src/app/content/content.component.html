@@ -1,0 +1,205 @@
+<div class="content">
+    <div class="content__inner">
+        <div class="content__tabs tabs">
+            <div class="tabs__item tabs__item_active" (click)="changeTab($event)">Групповое</div>
+            <div class="tabs__item" (click)="changeTab($event)">Индивидуальное</div>
+        </div>
+
+        <div class="content__filter filter">
+            <div class="filter__top">
+                <div class="filter__search">
+                    <input class="filter__search-input" type="text" placeholder="Поиск">
+                    <div class="filter__search-btn"></div>
+                </div>
+                <div class="filter__item">
+                    <label class="filter__label" >Программа
+                        <select class="filter__select" name="programm">
+                            <option value="all" selected>Все</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="filter__item">
+                    <label class="filter__label" >Период
+                        <select class="filter__select" name="period">
+                            <option value="all" selected>Июнь</option>
+                            <option value="other">Июль</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="filter__item">
+                    <label class="filter__label">Статус
+                        <select class="filter__select" name="status">
+                            <option value="all" selected>Все</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            <div class="filter__bottom">
+                <div class="filter__counter">34 сессии</div>
+                <div class="filter__settings">Настроить фильтр</div>
+                <div class="filter__reset">Сбросить</div>
+            </div>
+
+            <div class="filter__sorting filter__item">
+                <label class="filter__label">Сортировка
+                    <select class="filter__select" name="sorting">
+                        <option value="all" selected>По прогрессу</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+
+        <div class="content__schedule schedule">
+            <div class="schedule__row schedule__row_top">
+                <div class="schedule__date-item">Дата начала</div>
+                <div class="schedule__name-item">Название</div>
+                <div class="schedule__count-item">Участников</div>
+                <div class="schedule__trainer-item">Тренер</div>
+                <div class="schedule__progress-item schedule__progress-item_title">Прогресс</div>
+            </div>
+            <div class="schedule__row">
+                <div class="schedule__date-item">23 дек, 9:00</div>
+                <div class="schedule__name-item">Страхование с заботой о клиенте</div>
+                <div class="schedule__count-item">12</div>
+                <div class="schedule__trainer-item">-</div>
+                <div class="schedule__progress-item">95 %</div>
+                <div class="schedule__menu">
+                    <div class="schedule__menu-list">
+                        <div class="schedule__menu-item">Редактировать</div>
+                        <div class="schedule__menu-item">Удалить</div>
+                    </div>
+                </div>
+            </div>
+            <div class="schedule__row">
+                <div class="schedule__date-item">14 ноя, 9:30</div>
+                <div class="schedule__name-item">Главные правила продаж</div>
+                <div class="schedule__count-item">10</div>
+                <div class="schedule__trainer-item">-</div>
+                <div class="schedule__progress-item">91 %</div>
+                <div class="schedule__menu">
+                    <div class="schedule__menu-list">
+                        <div class="schedule__menu-item">Редактировать</div>
+                        <div class="schedule__menu-item">Удалить</div>
+                    </div>
+                </div>
+            </div>
+            <div class="schedule__row">
+                <div class="schedule__date-item">19 окт, 14:30</div>
+                <div class="schedule__name-item">Первичное обучение КС</div>
+                <div class="schedule__count-item">8</div>
+                <div class="schedule__trainer-item">-</div>
+                <div class="schedule__progress-item">86 %</div>
+                <div class="schedule__menu">
+                    <div class="schedule__menu-list">
+                        <div class="schedule__menu-item">Редактировать</div>
+                        <div class="schedule__menu-item">Удалить</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="editbar">
+    <div class="editbar__inner">
+        <div class="editbar__header">
+            <div class="editbar__title title">Планирование</div>
+            <div class="editbar__buttons">
+                <div class="editbar__btn editbar__btn_done" (click)="closeEditbar()"></div>
+                <div class="editbar__btn editbar__btn_close" (click)="closeEditbar()"></div>
+            </div>
+        </div>
+
+        <div class="editbar__tabs tabs">
+            <div class="tabs__item tabs__item_active">Основное</div>
+            <div class="tabs__item">Участники</div>
+        </div>
+
+        <div class="editbar__filter filter">
+            <div class="filter__item filter__item_wide">
+                <label class="filter__label" >Программа
+                    <select class="filter__select" name="programm-select">
+                        <option value="programm-1" selected>Страхование с заботой о клиенте</option>
+                        <option value="programm-1">Другая программа</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+
+        <div class="event-time">
+            <div class="event-time__title title title_small">Мероприятие, дата и время проведения</div>
+
+            <div class="event-time__item">
+                <div class="event-time__item-top">
+                    <div class="event-time__item-subtitle">Мероприятие</div>
+                    <div class="event-time__item-name">Главные правила продаж
+                        <span class="event-time__item-type">Тренинг</span>
+                    </div>
+                </div>
+                <div class="event-time__item-option">
+                    <div class="filter">
+                        <div class="filter__row">
+                            <div class="filter__item filter__item_visible">
+                                <label class="filter__label" >Дата
+                                    <select class="filter__select" name="Date">
+                                        <option value="programm-1" selected>28 Ноября</option>
+                                        <option value="programm-1">28 Декабря</option>
+                                    </select>
+                                </label>
+                            </div>
+
+                            <div class="filter__item filter__item_visible">
+                                <label class="filter__label" >Время
+                                    <select class="filter__select" name="time">
+                                        <option value="programm-1" selected>9:00</option>
+                                        <option value="programm-1">12:00</option>
+                                    </select>
+                                </label>
+                            </div>
+
+                            <div class="filter__item filter__item_visible">
+                                <label class="filter__label" >Тренер
+                                    <select class="filter__select" name="trainer">
+                                        <option value="programm-1" selected>Сергей Ефремов</option>
+                                        <option value="programm-1">Другая программа</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-time__conditions">
+                    <div class="event-time__conditions-title title title_small">
+                        Условия записи по коду
+                    </div>
+                    <div class="event-time__conditions-item">
+                        <label > Не использовать код доступа
+                            <input type="radio" name="conditions" checked>
+                        </label>
+                    </div>
+                    <div class="event-time__conditions-item">
+                        <label> Требовать регистрацию
+                            <input type="radio" name="conditions">
+                        </label>
+                    </div>
+                    <div class="event-time__conditions-item">
+                        <label> Запросить только имя и фамилию
+                            <input type="radio" name="conditions">
+                        </label>
+                    </div>
+                    <div class="event-time__conditions-item">
+                        <label> Не требовать регистрацию, имя и фамилию
+                            <input type="radio" name="conditions">
+                        </label>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
